@@ -1,0 +1,14 @@
+1. Xamarin cannot call localhost API
+	In .vs folder in '.vs\config\applicationhost.config' add full binding:
+	<binding protocol="http" bindingInformation="*:13121:*" />
+	To site CiuchApp.Dashboard (around line: 164)
+
+2. New DB Migration cannot be created
+	Set Startup project as CiuchApp.Dashboard
+	In Package Manager Console set Default Project as CiuchAPp.DataAccess
+
+3. Apply migration to remote database
+	replace DefaultConnection with connection to webio. delete all migrations, remove __migration table, add migration "Initial", update database, remove  production connection string
+
+4. Issue with dlls (package) when run/debug test method
+	Look at NuGet Packages that are refferenced (e.g. Not- Microsoft.Data.Addnotation - BUT- Mictosoft.AspNetCore.Mvc.Data.Addnotatoin)

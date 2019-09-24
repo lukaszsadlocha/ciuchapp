@@ -1,0 +1,223 @@
+2018-10-24 11:39:10.082 +02:00 [INF] Starting web host
+2018-10-24 11:39:12.493 +02:00 [INF] User profile is available. Using 'C:\Users\Lukasz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-10-24 11:39:14.000 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/  
+2018-10-24 11:39:18.323 +02:00 [INF] Starting web host
+2018-10-24 11:39:22.359 +02:00 [INF] User profile is available. Using 'C:\Users\Lukasz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-10-24 11:39:24.050 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/  
+2018-10-24 11:39:24.050 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:13121/  0
+2018-10-24 11:39:24.362 +02:00 [INF] Request finished in 339.1937ms 200 
+2018-10-24 11:39:25.616 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard)
+2018-10-24 11:39:25.686 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:39:25.704 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ViewResult in 10.551400000000001ms.
+2018-10-24 11:39:39.897 +02:00 [INF] Executing ViewResult, running view Index.
+2018-10-24 11:39:42.910 +02:00 [INF] Executed ViewResult - view Index executed in 17166.839500000002ms.
+2018-10-24 11:39:42.921 +02:00 [INF] Executed action CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard) in 17299.7913ms
+2018-10-24 11:39:43.017 +02:00 [INF] Request finished in 19006.9875ms 200 text/html; charset=utf-8
+2018-10-24 11:39:43.086 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/js/site.js  
+2018-10-24 11:39:43.099 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2018-10-24 11:39:43.197 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Users\Lukasz\source\repos\Ciuch\CiuchApp.Dashboard\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
+2018-10-24 11:39:43.197 +02:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Lukasz\source\repos\Ciuch\CiuchApp.Dashboard\wwwroot\js\site.js'
+2018-10-24 11:39:43.203 +02:00 [INF] Request finished in 103.8089ms 200 font/woff2
+2018-10-24 11:39:43.204 +02:00 [INF] Request finished in 117.1877ms 200 application/javascript
+2018-10-24 11:40:13.495 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/BusinessTrips  
+2018-10-24 11:40:13.529 +02:00 [INF] Route matched with {action = "Index", controller = "BusinessTrips"}. Executing action CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard)
+2018-10-24 11:40:13.544 +02:00 [INF] Executing action method CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:40:16.062 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:40:20.852 +02:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Cities] AS [c]
+2018-10-24 11:40:22.145 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CityId], [b].[CountryId], [b].[CurrencyId], [b].[DateFrom], [b].[DateTo], [b].[SeasonId], [b.Season].[Id], [b.Season].[Name], [b.Currency].[Id], [b.Currency].[Name], [b.Country].[Id], [b.Country].[Name], [b.City].[Id], [b.City].[Name]
+FROM [BusinessTrips] AS [b]
+INNER JOIN [Seasons] AS [b.Season] ON [b].[SeasonId] = [b.Season].[Id]
+INNER JOIN [Currencies] AS [b.Currency] ON [b].[CurrencyId] = [b.Currency].[Id]
+INNER JOIN [Countries] AS [b.Country] ON [b].[CountryId] = [b.Country].[Id]
+INNER JOIN [Cities] AS [b.City] ON [b].[CityId] = [b.City].[Id]
+2018-10-24 11:40:22.353 +02:00 [INF] Executed action method CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ViewResult in 8809.0077ms.
+2018-10-24 11:40:24.370 +02:00 [INF] Executing ViewResult, running view Index.
+2018-10-24 11:40:24.670 +02:00 [INF] Executed ViewResult - view Index executed in 2316.4377ms.
+2018-10-24 11:40:24.670 +02:00 [INF] Executed action CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard) in 11140.840900000001ms
+2018-10-24 11:40:24.677 +02:00 [INF] Request finished in 11181.9756ms 200 text/html; charset=utf-8
+2018-10-24 11:41:56.270 +02:00 [INF] Starting web host
+2018-10-24 11:42:01.095 +02:00 [INF] User profile is available. Using 'C:\Users\Lukasz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-10-24 11:42:02.842 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:13121/  0
+2018-10-24 11:42:02.842 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/  
+2018-10-24 11:42:03.096 +02:00 [INF] Request finished in 256.6074ms 200 
+2018-10-24 11:42:03.933 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard)
+2018-10-24 11:42:04.016 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:42:04.031 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ViewResult in 8.4634ms.
+2018-10-24 11:42:17.317 +02:00 [INF] Executing ViewResult, running view Index.
+2018-10-24 11:42:19.539 +02:00 [INF] Executed ViewResult - view Index executed in 15467.4801ms.
+2018-10-24 11:42:19.600 +02:00 [INF] Executed action CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard) in 15659.9109ms
+2018-10-24 11:42:19.677 +02:00 [INF] Request finished in 16862.6849ms 200 text/html; charset=utf-8
+2018-10-24 11:44:36.995 +02:00 [INF] Starting web host
+2018-10-24 11:44:40.776 +02:00 [INF] User profile is available. Using 'C:\Users\Lukasz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-10-24 11:44:42.470 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/  
+2018-10-24 11:44:42.470 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:13121/  0
+2018-10-24 11:44:42.696 +02:00 [INF] Request finished in 239.3565ms 200 
+2018-10-24 11:44:43.409 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard)
+2018-10-24 11:44:43.467 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:44:43.482 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ViewResult in 8.0413ms.
+2018-10-24 11:44:55.588 +02:00 [INF] Executing ViewResult, running view Index.
+2018-10-24 11:44:57.614 +02:00 [INF] Executed ViewResult - view Index executed in 14088.924700000001ms.
+2018-10-24 11:44:57.674 +02:00 [INF] Executed action CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard) in 14258.059200000002ms
+2018-10-24 11:44:57.768 +02:00 [INF] Request finished in 15323.4981ms 200 text/html; charset=utf-8
+2018-10-24 11:45:27.907 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/BusinessTrips  
+2018-10-24 11:45:27.960 +02:00 [INF] Route matched with {action = "Index", controller = "BusinessTrips"}. Executing action CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard)
+2018-10-24 11:45:27.961 +02:00 [INF] Executing action method CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:45:30.079 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:45:31.567 +02:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Cities] AS [c]
+2018-10-24 11:45:32.905 +02:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CityId], [b].[CountryId], [b].[CurrencyId], [b].[DateFrom], [b].[DateTo], [b].[SeasonId], [b.Season].[Id], [b.Season].[Name], [b.Currency].[Id], [b.Currency].[Name], [b.Country].[Id], [b.Country].[Name], [b.City].[Id], [b.City].[Name]
+FROM [BusinessTrips] AS [b]
+INNER JOIN [Seasons] AS [b.Season] ON [b].[SeasonId] = [b.Season].[Id]
+INNER JOIN [Currencies] AS [b.Currency] ON [b].[CurrencyId] = [b.Currency].[Id]
+INNER JOIN [Countries] AS [b.Country] ON [b].[CountryId] = [b.Country].[Id]
+INNER JOIN [Cities] AS [b.City] ON [b].[CityId] = [b.City].[Id]
+2018-10-24 11:45:33.116 +02:00 [INF] Executed action method CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ViewResult in 5155.6477ms.
+2018-10-24 11:45:35.247 +02:00 [INF] Executing ViewResult, running view Index.
+2018-10-24 11:45:35.414 +02:00 [INF] Executed ViewResult - view Index executed in 2296.9485ms.
+2018-10-24 11:45:35.415 +02:00 [INF] Executed action CiuchApp.Dashboard.BusinessTripsController.Index (CiuchApp.Dashboard) in 7454.8961ms
+2018-10-24 11:45:35.437 +02:00 [INF] Request finished in 7529.7699ms 200 text/html; charset=utf-8
+2018-10-24 11:45:54.610 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/BusinessTrips  
+2018-10-24 11:45:54.699 +02:00 [INF] Route matched with {action = "GetBusinessTrips", controller = "BusinessTripsApi"}. Executing action CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard)
+2018-10-24 11:45:54.701 +02:00 [INF] Executing action method CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:45:54.706 +02:00 [INF] GetBusinessTrips() 10/24/2018 11:45:54 AM
+2018-10-24 11:45:54.708 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:45:54.709 +02:00 [INF] Executed action method CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.2323ms.
+2018-10-24 11:45:54.749 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[CiuchApp.Domain.BusinessTrip, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CiuchApp.Domain.Season, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:45:55.241 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CityId], [b].[CountryId], [b].[CurrencyId], [b].[DateFrom], [b].[DateTo], [b].[SeasonId], [b.Season].[Id], [b.Season].[Name], [b.Currency].[Id], [b.Currency].[Name], [b.Country].[Id], [b.Country].[Name], [b.City].[Id], [b.City].[Name]
+FROM [BusinessTrips] AS [b]
+INNER JOIN [Seasons] AS [b.Season] ON [b].[SeasonId] = [b.Season].[Id]
+INNER JOIN [Currencies] AS [b.Currency] ON [b].[CurrencyId] = [b.Currency].[Id]
+INNER JOIN [Countries] AS [b.Country] ON [b].[CountryId] = [b.Country].[Id]
+INNER JOIN [Cities] AS [b.City] ON [b].[CityId] = [b.City].[Id]
+2018-10-24 11:45:55.335 +02:00 [INF] Executed action CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard) in 635.3637ms
+2018-10-24 11:45:55.335 +02:00 [INF] Request finished in 724.4753ms 200 application/json; charset=utf-8
+2018-10-24 11:46:03.198 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/Countries  
+2018-10-24 11:46:03.201 +02:00 [INF] Route matched with {action = "GetCountries", controller = "Countries"}. Executing action CiuchApp.Dashboard.Controllers.Dropdowns.CountriesController.GetCountries (CiuchApp.Dashboard)
+2018-10-24 11:46:03.202 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.Dropdowns.CountriesController.GetCountries (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:46:03.215 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:03.248 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Countries] AS [c]
+2018-10-24 11:46:03.251 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.Dropdowns.CountriesController.GetCountries (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 48.578700000000005ms.
+2018-10-24 11:46:03.251 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CiuchApp.Domain.Country, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:46:03.254 +02:00 [INF] Executed action CiuchApp.Dashboard.Controllers.Dropdowns.CountriesController.GetCountries (CiuchApp.Dashboard) in 52.5535ms
+2018-10-24 11:46:03.255 +02:00 [INF] Request finished in 56.8005ms 200 application/json; charset=utf-8
+2018-10-24 11:46:03.397 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/Cities  
+2018-10-24 11:46:03.399 +02:00 [INF] Route matched with {action = "GetCities", controller = "Cities"}. Executing action CiuchApp.Dashboard.Controllers.Dropdowns.CitiesController.GetCities (CiuchApp.Dashboard)
+2018-10-24 11:46:03.399 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.Dropdowns.CitiesController.GetCities (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:46:03.399 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:03.420 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Cities] AS [c]
+2018-10-24 11:46:03.421 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.Dropdowns.CitiesController.GetCities (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 21.6459ms.
+2018-10-24 11:46:03.421 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CiuchApp.Domain.City, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:46:03.423 +02:00 [INF] Executed action CiuchApp.Dashboard.Controllers.Dropdowns.CitiesController.GetCities (CiuchApp.Dashboard) in 24.5ms
+2018-10-24 11:46:03.424 +02:00 [INF] Request finished in 26.7882ms 200 application/json; charset=utf-8
+2018-10-24 11:46:03.434 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/Currencies  
+2018-10-24 11:46:03.440 +02:00 [INF] Route matched with {action = "GetCurrencies", controller = "Currencies"}. Executing action CiuchApp.Dashboard.Controllers.Dropdowns.CurrenciesController.GetCurrencies (CiuchApp.Dashboard)
+2018-10-24 11:46:03.441 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.Dropdowns.CurrenciesController.GetCurrencies (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:46:03.442 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:03.469 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Currencies] AS [c]
+2018-10-24 11:46:03.472 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.Dropdowns.CurrenciesController.GetCurrencies (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 30.6357ms.
+2018-10-24 11:46:03.472 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CiuchApp.Domain.Currency, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:46:03.475 +02:00 [INF] Executed action CiuchApp.Dashboard.Controllers.Dropdowns.CurrenciesController.GetCurrencies (CiuchApp.Dashboard) in 34.440200000000004ms
+2018-10-24 11:46:03.475 +02:00 [INF] Request finished in 40.7934ms 200 application/json; charset=utf-8
+2018-10-24 11:46:03.490 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/Seasons  
+2018-10-24 11:46:03.492 +02:00 [INF] Route matched with {action = "GetSeasons", controller = "Seasons"}. Executing action CiuchApp.Dashboard.Controllers.Dropdowns.SeasonsController.GetSeasons (CiuchApp.Dashboard)
+2018-10-24 11:46:03.493 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.Dropdowns.SeasonsController.GetSeasons (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:46:03.494 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:03.521 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name]
+FROM [Seasons] AS [s]
+2018-10-24 11:46:03.523 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.Dropdowns.SeasonsController.GetSeasons (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 30.568900000000003ms.
+2018-10-24 11:46:03.524 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CiuchApp.Domain.Season, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:46:03.525 +02:00 [INF] Executed action CiuchApp.Dashboard.Controllers.Dropdowns.SeasonsController.GetSeasons (CiuchApp.Dashboard) in 32.6561ms
+2018-10-24 11:46:03.525 +02:00 [INF] Request finished in 34.8582ms 200 application/json; charset=utf-8
+2018-10-24 11:46:14.473 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/BusinessTrips  
+2018-10-24 11:46:14.475 +02:00 [INF] Route matched with {action = "GetBusinessTrips", controller = "BusinessTripsApi"}. Executing action CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard)
+2018-10-24 11:46:14.475 +02:00 [INF] Executing action method CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:46:14.475 +02:00 [INF] GetBusinessTrips() 10/24/2018 11:46:14 AM
+2018-10-24 11:46:14.476 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:14.476 +02:00 [INF] Executed action method CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5788ms.
+2018-10-24 11:46:14.476 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[CiuchApp.Domain.BusinessTrip, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CiuchApp.Domain.Season, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:46:14.479 +02:00 [INF] Request starting HTTP/1.1 POST http://10.0.2.2:13121/api/BusinessTrips application/x-www-form-urlencoded 120
+2018-10-24 11:46:14.514 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CityId], [b].[CountryId], [b].[CurrencyId], [b].[DateFrom], [b].[DateTo], [b].[SeasonId], [b.Season].[Id], [b.Season].[Name], [b.Currency].[Id], [b.Currency].[Name], [b.Country].[Id], [b.Country].[Name], [b.City].[Id], [b.City].[Name]
+FROM [BusinessTrips] AS [b]
+INNER JOIN [Seasons] AS [b.Season] ON [b].[SeasonId] = [b.Season].[Id]
+INNER JOIN [Currencies] AS [b.Currency] ON [b].[CurrencyId] = [b.Currency].[Id]
+INNER JOIN [Countries] AS [b.Country] ON [b].[CountryId] = [b.Country].[Id]
+INNER JOIN [Cities] AS [b.City] ON [b].[CityId] = [b.City].[Id]
+2018-10-24 11:46:14.515 +02:00 [INF] Executed action CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard) in 40.136ms
+2018-10-24 11:46:14.516 +02:00 [INF] Request finished in 42.7153ms 200 application/json; charset=utf-8
+2018-10-24 11:46:14.570 +02:00 [INF] Route matched with {action = "PostBusinessTrip", controller = "BusinessTripsApi"}. Executing action CiuchApp.Dashboard.BusinessTripsApiController.PostBusinessTrip (CiuchApp.Dashboard)
+2018-10-24 11:46:14.850 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/Pieces  
+2018-10-24 11:46:14.853 +02:00 [INF] Route matched with {action = "GetPieces", controller = "PiecesApi"}. Executing action CiuchApp.Dashboard.PiecesApiController.GetPieces (CiuchApp.Dashboard)
+2018-10-24 11:46:14.853 +02:00 [INF] Executing action method CiuchApp.Dashboard.PiecesApiController.GetPieces (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:46:14.864 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:14.873 +02:00 [INF] Executed action method CiuchApp.Dashboard.PiecesApiController.GetPieces (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.428ms.
+2018-10-24 11:46:14.877 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[CiuchApp.Domain.Piece, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CiuchApp.Domain.Supplier, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:46:14.971 +02:00 [INF] Executing action method CiuchApp.Dashboard.BusinessTripsApiController.PostBusinessTrip (CiuchApp.Dashboard) with arguments (["CiuchApp.Domain.BusinessTrip"]) - Validation state: "Valid"
+2018-10-24 11:46:29.751 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:31.940 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [BusinessTrips] ([CityId], [CountryId], [CurrencyId], [DateFrom], [DateTo], [SeasonId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [BusinessTrips]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2018-10-24 11:46:34.325 +02:00 [INF] Executed DbCommand (866ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[BusinessTripId], [p].[BuyPrice], [p].[CodeCnId], [p].[ColorId], [p].[ColorNameId], [p].[ComponentId], [p].[CountryOfOriginId], [p].[EstimatedDateOfShipment], [p].[EstimatedTimeOfDelivery], [p].[GroupId], [p].[ImageName], [p].[MainCategoryId], [p].[Name], [p].[OrderDate], [p].[SellPrice], [p].[SetId], [p].[SizeId], [p].[SupplierId], [p.Supplier].[Id], [p.Supplier].[Name], [p.Size].[Id], [p.Size].[Name], [p.Set].[Id], [p.Set].[Name], [p.MainCategory].[Id], [p.MainCategory].[Name], [p.Group].[Id], [p.Group].[Name], [p.CountryOfOrigin].[Id], [p.CountryOfOrigin].[Name], [p.ColorName].[Id], [p.ColorName].[Name], [p.Color].[Id], [p.Color].[Name], [p.CodeCn].[Id], [p.CodeCn].[Name], [p.BusinessTrip].[Id], [p.BusinessTrip].[CityId], [p.BusinessTrip].[CountryId], [p.BusinessTrip].[CurrencyId], [p.BusinessTrip].[DateFrom], [p.BusinessTrip].[DateTo], [p.BusinessTrip].[SeasonId], [p.BusinessTrip.City].[Id], [p.BusinessTrip.City].[Name], [p.BusinessTrip.Country].[Id], [p.BusinessTrip.Country].[Name], [p.BusinessTrip.Currency].[Id], [p.BusinessTrip.Currency].[Name], [p.BusinessTrip.Season].[Id], [p.BusinessTrip.Season].[Name]
+FROM [Pieces] AS [p]
+INNER JOIN [Suppliers] AS [p.Supplier] ON [p].[SupplierId] = [p.Supplier].[Id]
+INNER JOIN [Sizes] AS [p.Size] ON [p].[SizeId] = [p.Size].[Id]
+INNER JOIN [Sets] AS [p.Set] ON [p].[SetId] = [p.Set].[Id]
+INNER JOIN [MainCategories] AS [p.MainCategory] ON [p].[MainCategoryId] = [p.MainCategory].[Id]
+INNER JOIN [Groups] AS [p.Group] ON [p].[GroupId] = [p.Group].[Id]
+INNER JOIN [CountryOfOrigin] AS [p.CountryOfOrigin] ON [p].[CountryOfOriginId] = [p.CountryOfOrigin].[Id]
+INNER JOIN [ColorNames] AS [p.ColorName] ON [p].[ColorNameId] = [p.ColorName].[Id]
+INNER JOIN [Colors] AS [p.Color] ON [p].[ColorId] = [p.Color].[Id]
+INNER JOIN [CodeCns] AS [p.CodeCn] ON [p].[CodeCnId] = [p.CodeCn].[Id]
+INNER JOIN [BusinessTrips] AS [p.BusinessTrip] ON [p].[BusinessTripId] = [p.BusinessTrip].[Id]
+INNER JOIN [Cities] AS [p.BusinessTrip.City] ON [p.BusinessTrip].[CityId] = [p.BusinessTrip.City].[Id]
+INNER JOIN [Countries] AS [p.BusinessTrip.Country] ON [p.BusinessTrip].[CountryId] = [p.BusinessTrip.Country].[Id]
+INNER JOIN [Currencies] AS [p.BusinessTrip.Currency] ON [p.BusinessTrip].[CurrencyId] = [p.BusinessTrip.Currency].[Id]
+INNER JOIN [Seasons] AS [p.BusinessTrip.Season] ON [p.BusinessTrip].[SeasonId] = [p.BusinessTrip.Season].[Id]
+2018-10-24 11:46:34.362 +02:00 [INF] Executed action method CiuchApp.Dashboard.BusinessTripsApiController.PostBusinessTrip (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19389.174000000003ms.
+2018-10-24 11:46:34.541 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2018-10-24 11:46:34.647 +02:00 [INF] Executed action CiuchApp.Dashboard.BusinessTripsApiController.PostBusinessTrip (CiuchApp.Dashboard) in 20077.3583ms
+2018-10-24 11:46:35.060 +02:00 [INF] Request finished in 20580.7093ms 200 text/plain; charset=utf-8
+2018-10-24 11:46:35.166 +02:00 [INF] Executed action CiuchApp.Dashboard.PiecesApiController.GetPieces (CiuchApp.Dashboard) in 20313.044ms
+2018-10-24 11:46:35.166 +02:00 [INF] Request finished in 20315.6795ms 200 application/json; charset=utf-8
+2018-10-24 11:46:55.852 +02:00 [INF] Request starting HTTP/1.1 GET http://10.0.2.2:13121/api/BusinessTrips  
+2018-10-24 11:46:55.852 +02:00 [INF] Route matched with {action = "GetBusinessTrips", controller = "BusinessTripsApi"}. Executing action CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard)
+2018-10-24 11:46:55.852 +02:00 [INF] Executing action method CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 11:46:55.852 +02:00 [INF] GetBusinessTrips() 10/24/2018 11:46:55 AM
+2018-10-24 11:46:55.853 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-10-24 11:46:55.853 +02:00 [INF] Executed action method CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5493ms.
+2018-10-24 11:46:55.853 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[CiuchApp.Domain.BusinessTrip, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CiuchApp.Domain.Season, CiuchApp.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-10-24 11:46:55.880 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CityId], [b].[CountryId], [b].[CurrencyId], [b].[DateFrom], [b].[DateTo], [b].[SeasonId], [b.Season].[Id], [b.Season].[Name], [b.Currency].[Id], [b.Currency].[Name], [b.Country].[Id], [b.Country].[Name], [b.City].[Id], [b.City].[Name]
+FROM [BusinessTrips] AS [b]
+INNER JOIN [Seasons] AS [b.Season] ON [b].[SeasonId] = [b.Season].[Id]
+INNER JOIN [Currencies] AS [b.Currency] ON [b].[CurrencyId] = [b.Currency].[Id]
+INNER JOIN [Countries] AS [b.Country] ON [b].[CountryId] = [b.Country].[Id]
+INNER JOIN [Cities] AS [b.City] ON [b].[CityId] = [b.City].[Id]
+2018-10-24 11:46:55.881 +02:00 [INF] Executed action CiuchApp.Dashboard.BusinessTripsApiController.GetBusinessTrips (CiuchApp.Dashboard) in 28.4431ms
+2018-10-24 11:46:55.881 +02:00 [INF] Request finished in 29.4203ms 200 application/json; charset=utf-8
+2018-10-24 12:16:36.949 +02:00 [INF] Starting web host
+2018-10-24 12:16:45.817 +02:00 [INF] User profile is available. Using 'C:\Users\Lukasz\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-10-24 12:16:47.921 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:13121/  0
+2018-10-24 12:16:47.921 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:13121/  
+2018-10-24 12:16:48.198 +02:00 [INF] Request finished in 276.7034ms 200 
+2018-10-24 12:16:50.207 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard)
+2018-10-24 12:16:50.286 +02:00 [INF] Executing action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard) - Validation state: "Valid"
+2018-10-24 12:16:50.305 +02:00 [INF] Executed action method CiuchApp.Dashboard.Controllers.HomeController.Index (CiuchApp.Dashboard), returned result Microsoft.AspNetCore.Mvc.ViewResult in 7.2166000000000006ms.

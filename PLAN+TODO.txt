@@ -1,0 +1,87 @@
+-------------------------------------------------
+Keep posting on blog.lukaszsadlocha.pl
+Add to git
+------------------------------------------------
+
+-----------------
+|  USER STORIES |
+-----------------
+
+----------------------------------------------------------------------US1: (Mobile,Dashboard) Make calls ASYNC - And whole logic more async
+----------------------------------------------------------------------US2: (Mobile) Fix passing bitmap (not serializing but passing path or file) Make bitmap in Clothe Activity
+----------------------------------------------------------------------US4: (BusinessTrip) Add ApiControllers to all dropdowns + Add Spinners to all dropdows 
+----------------------------------------------------------------------US5: (Dashboard) Fix issue with "+" adding additional item to list
+----------------------------------------------------------------------US6: (Mobile:NewBusinessTrip) fix datepicker
+----------------------------------------------------------------------US7: (Mobile) handle "Add new business trip" on NewBusinessTrip
+----------------------------------------------------------------------US8: (GIT) Set VSTS Project and push code there
+----------------------------------------------------------------------US9: (DevOps) Push Dashboard + Api to Webio and try to connect from Mobile
+----------------------------------------------------------------------US10: (DevOps) Set simple deployment pipeline
+----------------------------------------------------------------------US11: (Mobile) Set Light Theme
+----------------------------------------------------------------------US12: (Mobile) Update exisiting Business Trip   [Need to update Main view Select Business Trips]
+----------------------------------------------------------------------US13: (Dashboard) Validate Model - Business Trip
+US14: (Mobile) Error handling for timeout request for Api Calls
+US15: (Dashboard) Feractor JS Codem remove stupid if-else, code that is not used, make it more portable
+US16: (Mobile/Dashboard) DropDown Valus: Layouts/Controllers/views/JS and all the rest
+----------------------------------------------------------------------US17: (Mobile/Dashboard) Pieces: Layouts/Controllers/views/JS and all the rest
+----------------------------------------------------------------------US18: (Webio) Set Database on Webio
+US19: (Domain) Add custom errors to domain models in polish
+US20: (Excel) Prepare dummy excel with some reusabe logic for rules
+US21: (Dashboard) ability to change image of Piece from disk
+----------------------------------------------------------------------US22: (Mobile) Swich to use Development/Prod BaseApiUrl (Relese/Debug) configuration + deploy app to mobile phone
+----------------------------------------------------------------------US23: (Dashboard) Logging
+US24: (Android) Logging
+US25: (WebAPi) add tests for POST, PUT methods
+----------------------------------------------------------------------US26 + : (Mobile/Dashoboard) create custom control for sizes and amount of pieces
+US27 + : (Mobile) create different sizes of image + refactor name (add datetime there)
+----------------------------------------------------------------------US28 + : (Mobile) Edit Piece - fill name, prices with data (not empty)
+----------------------------------------------------------------------US29 + : (Mobile) Add "loading" screen while loading app
+----------------------------------------------------------------------US30 + : (Mobile/Dashboard) pouplate right data (piece/bt) back to list. 
+----------------------------------------------------------------------US31 + : (Mobile/Dashboard) Dependency Injection
+----------------------------------------------------------------------US32 : (MobileTests) Introduce UI tests
+----------------------------------------------------------------------US33 : (Mobile) Cascade dropdowns
+----------------------------------------------------------------------US34 : (Dashboard) Refresh web design
+----------------------------------------------------------------------US35 + : (Mobile) Add toolbar with Sync images back to mobile
+US36 + : (Mobile) Theme colors & Alignments
+----------------------------------------------------------------------US37 + : (Mobile) Do not show keyboard when open piece
+---------------------------US38 + : (Mobile) Use default binding in Xamarin instead on logic that was developed
+
+-----------------
+|     BUGS      |
+-----------------
+----------------------------------------------------------------------BUG1 : After deployment to phisical device - unable to send data (Release mode + RemoteApi) [ISSUE] There was an issue with DateTime Format passed to RemoteApi (issue with "." e.g. 31.10.2018 could not be parsed)
+----------------------------------------------------------------------BUG2 : Buy Pirce - cannot add . (delimiter) on phisical device - need to test on emulator
+----------------------------------------------------------------------BUG3 : ImageName Cannot be added to some objects (like sizeamount or BusinessTrip)
+
+-----------------
+|  DEPRICATED   |
+-----------------
+US3: (Dashboard) Sepearte Dashboard and WebApi
+
+
+VSTS:
+	https://lukaszsadlochavsts.visualstudio.com/_git/CiuchApp/
+
+jquery-tabledit	
+	https://markcell.github.io/jquery-tabledit
+
+alternative to jquery-tabledit: X-editable
+	https://vitalets.github.io/x-editable/demo.html?c=inline
+	https://stackoverflow.com/questions/38876772/use-x-editable-inline-in-a-table	=>	http://jsfiddle.net/xBB5x/348/   
+
+Resources:
+Xamarin:
+	Dropdown(s)
+	https://forums.xamarin.com/discussion/23776/radiobutton-and-dropdown-list
+	https://www.c-sharpcorner.com/article/creating-a-dropdown-list-using-spinner-in-xamarin-android-app-using-visual-studi/
+
+	Recieps (Camera):
+	https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/camera_intent/take_a_picture_and_save_using_camera_app
+
+Youtube Video (sending file from Xamarin to WebServer):
+	https://www.youtube.com/watch?v=IVvJX4CoLUY
+
+
+
+AI (Azure Cognitivity services)
+https://azure.microsoft.com/en-us/try/cognitive-services/?unauthorized=1
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts/csharp-analyze
