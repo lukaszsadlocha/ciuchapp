@@ -12,31 +12,20 @@ namespace CiuchApp.Mobile.Views
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
-    public partial class ItemDetailPage : ContentPage
+    public partial class BusinessTripDetailPage : ContentPage
     {
         BusinessTripViewModel viewModel;
 
-        public ItemDetailPage(BusinessTripViewModel viewModel)
+        public BusinessTripDetailPage(BusinessTripViewModel viewModel)
         {
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
         }
 
-        public ItemDetailPage()
+        private async void Save_Button_Clicked(object sender, EventArgs e)
         {
-            InitializeComponent();
-
-            var item = new BusinessTrip
-            {
-                Country = new Country
-                {
-                    Name="Polska"
-                }
-            };
-
-            viewModel = new BusinessTripViewModel(item);
-            BindingContext = viewModel;
+            await DisplayAlert("Sucess", "Saved", "Done");
         }
     }
 }

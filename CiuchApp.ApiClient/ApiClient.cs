@@ -12,14 +12,33 @@ namespace CiuchApp.ApiClient
 {
     public class ApiClient : IApiClient
     {
-        private readonly ICiuchAppSettings _settings;
         private readonly string apiBaseUrl;
+
+        HttpClient client;
 
         public ApiClient(ICiuchAppSettings settings)
         {
-            _settings = settings;
-            apiBaseUrl = _settings.Urls.ApiUrl;
+            apiBaseUrl = @"https://api.ciuchapp.lukaszsadlocha.pl/";
+            client = new HttpClient();
+            client.BaseAddress = new Uri(apiBaseUrl);
+            
         }
+
+
+        public async Task<IEnumerable<Country>> GetCountries()
+        {
+            try
+            {
+                var json = await client.GetStringAsync($"countries");
+                return await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Country>>(json));
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+
 
         public async Task<CacheContext> GetCacheAsync()
         {

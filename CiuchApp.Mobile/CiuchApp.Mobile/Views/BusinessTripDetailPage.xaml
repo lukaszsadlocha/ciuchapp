@@ -4,14 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CiuchApp.Mobile.Views.ItemDetailPage"
+             x:Class="CiuchApp.Mobile.Views.BusinessTripDetailPage"
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
         <!--<Label Text="Text:" FontSize="Medium" />-->
-        <Label Text="{Binding Item.Country.Name}" d:Text="Item name" FontSize="Small"/>
+        <Label Text="{Binding Model.Country.Name}" FontSize="Small"/>
         <!--<Label Text="Description:" FontSize="Medium" />-->
-        <Label Text="{Binding Item.City.Name}" d:Text="Item description" FontSize="Small"/>
+        <Entry Text="{Binding SomeText, Mode=TwoWay}" d:Text="Item description" FontSize="Small"/>
+        <Image Source="{Binding ImageUrl}"></Image>
+        <Switch IsToggled="{Binding IsStock, Mode=TwoWay}"></Switch>
+        <DatePicker Date="{Binding DateFrom, Mode=TwoWay}"></DatePicker>
+        <DatePicker Date="{Binding DateTo, Mode=TwoWay}"></DatePicker>
+        <Picker Title="--Select--" ItemsSource="{Binding Cities}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedCity}}"></Picker>
+
+        <Button Text="Zapisz" Clicked="Save_Button_Clicked"></Button>
     </StackLayout>
     
 </ContentPage>

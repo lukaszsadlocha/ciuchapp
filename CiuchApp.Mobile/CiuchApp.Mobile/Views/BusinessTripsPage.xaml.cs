@@ -34,7 +34,7 @@ namespace CiuchApp.Mobile.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new BusinessTripViewModel(item)));
+            await Navigation.PushAsync(new BusinessTripDetailPage(new BusinessTripViewModel(item)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;

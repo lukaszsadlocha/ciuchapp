@@ -14,5 +14,7 @@ namespace CiuchApp.ApiClient
         List<Piece> GetPiecesByBusinessTripId(int id);
         bool Update<T>(T item) where T : CiuchAppBaseModel;
         bool UploadImage(string localFilePath, string fileName);
+
+        Task<IEnumerable<Country>> GetCountries();
     }
 }

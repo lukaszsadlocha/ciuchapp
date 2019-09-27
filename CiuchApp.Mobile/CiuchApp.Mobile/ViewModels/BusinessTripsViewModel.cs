@@ -21,11 +21,11 @@ namespace CiuchApp.Mobile.ViewModels
 
         public BusinessTripsViewModel()
         {
-            Title = "Browse";
+            Title = "CiuchApp - Wyjazdy";
             Items = new ObservableCollection<BusinessTrip>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, BusinessTrip>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewItemPage, BusinessTrip>(this, "Dodaj nowy", async (obj, item) =>
             {
                 var newItem = item as BusinessTrip;
                 Items.Add(newItem);
@@ -59,32 +59,5 @@ namespace CiuchApp.Mobile.ViewModels
                 IsBusy = false;
             }
         }
-
-        async Task<IEnumerable<BusinessTrip>> LoadCiuchApp()
-        {
-            using (HttpClient httpClient = new HttpClient())
-            {
-                var responseString = "";
-                try
-                {
-                    responseString = await httpClient.GetStringAsync(@"http://ciuchapp.lukaszsadlocha.pl/api/businesstrips");
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
-
-                if (string.IsNullOrEmpty(responseString))
-                {
-                    return new List<BusinessTrip>();
-                }
-
-                return JsonConvert.DeserializeObject<IEnumerable<BusinessTrip>>(responseString);
-
-            }
-
-
-        }
-
     }
 }

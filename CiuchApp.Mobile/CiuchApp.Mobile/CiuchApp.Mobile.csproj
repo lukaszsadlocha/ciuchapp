@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
   </PropertyGroup>
 
@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\CiuchApp.ApiClient\CiuchApp.ApiClient.csproj" />
+    <ProjectReference Include="..\..\CiuchApp.DataContext\CiuchApp.DataContext.csproj" />
     <ProjectReference Include="..\..\CiuchApp.Domain\CiuchApp.Domain.csproj" />
   </ItemGroup>
 
