@@ -1,11 +1,4 @@
-﻿using CiuchApp.Dashboard.Services;
-using CiuchApp.Domain;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace CiuchApp.Dashboard.Controllers.ViewComponents
@@ -18,7 +11,7 @@ namespace CiuchApp.Dashboard.Controllers.ViewComponents
             var folder = Request.Path.Value;
             var path = $@"/images{folder}/{itemId}.PNG";
 
-            return View(model:path);
+            return await Task.Run(() => View(model: path));
         }
     }
 }

@@ -1,9 +1,4 @@
-﻿using CiuchApp.Dashboard.Services;
-using CiuchApp.Domain;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace CiuchApp.Dashboard.Controllers.ViewComponents
@@ -12,7 +7,7 @@ namespace CiuchApp.Dashboard.Controllers.ViewComponents
     {
         public async Task<IViewComponentResult> InvokeAsync(bool includeExcelActions)
         {
-            return View(includeExcelActions);
+            return await Task.FromResult(View(includeExcelActions));
         }
     }
 }

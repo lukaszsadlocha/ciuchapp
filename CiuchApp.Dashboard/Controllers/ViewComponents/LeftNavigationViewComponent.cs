@@ -1,9 +1,6 @@
-﻿using CiuchApp.Dashboard.Services;
+﻿using CiuchApp.Services;
 using CiuchApp.Domain;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CiuchApp.Dashboard.Controllers.ViewComponents
@@ -19,7 +16,7 @@ namespace CiuchApp.Dashboard.Controllers.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            return View(service.GetAll());
+            return await Task.FromResult(View(service.GetAll()));
         }
     }
 }

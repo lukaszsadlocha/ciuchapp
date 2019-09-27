@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using CiuchApp.DataAccess;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using CiuchApp.Settings;
+using CiuchApp.DataContext;
 
 namespace CiuchApp.Dashboard
 {

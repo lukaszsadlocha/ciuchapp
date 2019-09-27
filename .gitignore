@@ -328,3 +328,7 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+CiuchApp.WebApi/appsettings.Production.json
+
+CiuchApp.WebApi/appsettings.Development.json

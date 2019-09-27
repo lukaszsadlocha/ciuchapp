@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>aspnet-CiuchApp.WebApi-BE3440C4-7FE5-467F-B5A1-52E0077E1610</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CiuchApp.DataContext\CiuchApp.DataContext.csproj" />
+    <ProjectReference Include="..\CiuchApp.DI\CiuchApp.DI.csproj" />
+    <ProjectReference Include="..\CiuchApp.Domain\CiuchApp.Domain.csproj" />
+    <ProjectReference Include="..\CiuchApp.Services\CiuchApp.Services.csproj" />
+  </ItemGroup>
+
+</Project>

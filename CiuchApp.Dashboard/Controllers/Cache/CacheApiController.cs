@@ -3,7 +3,7 @@ using CiuchApp.Domain;
 using Microsoft.Extensions.Logging;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using CiuchApp.DataAccess;
+using CiuchApp.DataContext;
 
 namespace CiuchApp.Dashboard.Controllers
 {
@@ -12,10 +12,12 @@ namespace CiuchApp.Dashboard.Controllers
     public class CacheApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<CacheApiController> logger;
 
         public CacheApiController(ApplicationDbContext context, ILogger<CacheApiController> logger)
         {
             _context = context;
+            this.logger = logger;
         }
 
         [HttpGet]

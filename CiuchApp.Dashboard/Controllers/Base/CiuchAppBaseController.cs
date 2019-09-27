@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using CiuchApp.Dashboard.Services;
+using CiuchApp.Services;
 using CiuchApp.Settings;
 using CiuchApp.Domain;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 

@@ -1,5 +1,5 @@
 ﻿using CiuchApp.Domain;
-using CiuchApp.Dashboard.Services;
+using CiuchApp.Services;
 using CiuchApp.Settings;
 using Microsoft.Extensions.Logging;
 using CiuchApp.Dashboard.Controllers.Base;

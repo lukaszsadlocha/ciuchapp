@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CiuchApp.Dashboard.Models.AccountViewModels;
-using CiuchApp.Dashboard.Services;
-using CiuchApp.DataAccess.AspNetIdentity;
+using CiuchApp.Services;
 using CiuchApp.Dashboard.Extensions.Attributes;
+using CiuchApp.DataAccess.AspNetIdentity;
+using CiuchApp.Services;
 
 namespace CiuchApp.Dashboard.Controllers
 {
