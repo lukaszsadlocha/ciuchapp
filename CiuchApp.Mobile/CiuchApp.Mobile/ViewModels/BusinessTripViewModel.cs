@@ -4,10 +4,10 @@ using CiuchApp.Mobile.Models;
 
 namespace CiuchApp.Mobile.ViewModels
 {
-    public class ItemDetailViewModel : BaseViewModel
+    public class BusinessTripViewModel : BaseViewModel
     {
         public BusinessTrip Item { get; set; }
-        public ItemDetailViewModel(BusinessTrip item = null)
+        public BusinessTripViewModel(BusinessTrip item = null)
         {
             Title = item?.Country?.Name;
             Item = item;

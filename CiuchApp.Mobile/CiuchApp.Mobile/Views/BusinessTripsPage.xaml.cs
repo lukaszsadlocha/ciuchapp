@@ -17,15 +17,15 @@ namespace CiuchApp.Mobile.Views
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
-    public partial class ItemsPage : ContentPage
+    public partial class BusinessTripsPage : ContentPage
     {
-        ItemsViewModel viewModel;
+        BusinessTripsViewModel viewModel;
 
-        public ItemsPage()
+        public BusinessTripsPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = new BusinessTripsViewModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -34,7 +34,7 @@ namespace CiuchApp.Mobile.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ItemDetailPage(new BusinessTripViewModel(item)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;

@@ -14,12 +14,12 @@ using CiuchApp.Domain;
 
 namespace CiuchApp.Mobile.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class BusinessTripsViewModel : BaseViewModel
     {
         public ObservableCollection<BusinessTrip> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsViewModel()
+        public BusinessTripsViewModel()
         {
             Title = "Browse";
             Items = new ObservableCollection<BusinessTrip>();

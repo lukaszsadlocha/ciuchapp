@@ -30,7 +30,7 @@ namespace CiuchApp.Mobile.Services
             {
                 try
                 {
-                    var json = await client.GetStringAsync($"api/businesstrips");
+                    var json = await client.GetStringAsync($"businesstrips");
                     items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<BusinessTrip>>(json));
                 }
                 catch(Exception e)

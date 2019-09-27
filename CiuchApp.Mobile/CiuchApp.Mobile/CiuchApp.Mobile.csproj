@@ -14,4 +14,13 @@
   <ItemGroup>
     <ProjectReference Include="..\..\CiuchApp.Domain\CiuchApp.Domain.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\BusinessTripsPage.xaml.cs">
+      <DependentUpon>BusinessTripsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BusinessTripDetailPage.xaml.cs">
+      <DependentUpon>BusinessTripDetailPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

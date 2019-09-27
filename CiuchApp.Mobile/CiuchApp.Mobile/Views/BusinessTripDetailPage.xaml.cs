@@ -14,9 +14,9 @@ namespace CiuchApp.Mobile.Views
     [DesignTimeVisible(false)]
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        BusinessTripViewModel viewModel;
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ItemDetailPage(BusinessTripViewModel viewModel)
         {
             InitializeComponent();
 
@@ -35,7 +35,7 @@ namespace CiuchApp.Mobile.Views
                 }
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new BusinessTripViewModel(item);
             BindingContext = viewModel;
         }
     }
