@@ -6,8 +6,11 @@ namespace CiuchApp.Mobile.Models
 {
     public enum MenuItemType
     {
-        Browse,
-        About
+        BusinessTripsOverviewMenuType,
+        PiecesOverviewMenuType,
+        DropdownsOverviewMenuType,
+        AccountMenuType,
+        AboutMenuType
     }
     public class HomeMenuItem
     {

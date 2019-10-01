@@ -13,7 +13,12 @@ namespace CiuchApp.Mobile.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<BusinessTrip> DataStore => DependencyService.Get<IDataStore<BusinessTrip>>();
+        public IDataStore<BusinessTrip> BusinessTripDataStore => DependencyService.Get<IDataStore<BusinessTrip>>();
+        public IDataStore<Country> CountryDataStore => DependencyService.Get<IDataStore<Country>>();
+        public IDataStore<City> CityDataStore => DependencyService.Get<IDataStore<City>>();
+        public IDataStore<Season> SeasonDataStore => DependencyService.Get<IDataStore<Season>>();
+        public IDataStore<Currency> CurrencyDataStore => DependencyService.Get<IDataStore<Currency>>();
+
 
         bool isBusy = false;
         public bool IsBusy

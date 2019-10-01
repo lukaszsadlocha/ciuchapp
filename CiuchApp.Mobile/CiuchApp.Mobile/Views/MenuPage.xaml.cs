@@ -13,15 +13,19 @@ namespace CiuchApp.Mobile.Views
     public partial class MenuPage : ContentPage
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
-        List<HomeMenuItem> menuItems;
+
+        readonly List<HomeMenuItem> menuItems;
         public MenuPage()
         {
             InitializeComponent();
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.BusinessTripsOverviewMenuType, Title="Wyjazdy" },
+                new HomeMenuItem {Id = MenuItemType.PiecesOverviewMenuType, Title="Ciuchy" },
+                new HomeMenuItem {Id = MenuItemType.DropdownsOverviewMenuType, Title="Wartości" },
+                new HomeMenuItem {Id = MenuItemType.AccountMenuType, Title="Konto" },
+                new HomeMenuItem {Id = MenuItemType.AboutMenuType, Title="O aplikacji" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

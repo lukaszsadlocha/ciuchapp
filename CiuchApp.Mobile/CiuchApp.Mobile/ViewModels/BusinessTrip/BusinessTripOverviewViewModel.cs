@@ -14,22 +14,22 @@ using CiuchApp.Domain;
 
 namespace CiuchApp.Mobile.ViewModels
 {
-    public class BusinessTripsViewModel : BaseViewModel
+    public class BusinessTripOverviewViewModel : BaseViewModel
     {
-        public ObservableCollection<BusinessTrip> Items { get; set; }
-        public Command LoadItemsCommand { get; set; }
+        public ObservableCollection<BusinessTrip> BusinessTrips { get; set; }
+        public Command LoadBusinessTripsCommand { get; set; }
 
-        public BusinessTripsViewModel()
+        public BusinessTripOverviewViewModel()
         {
             Title = "CiuchApp - Wyjazdy";
-            Items = new ObservableCollection<BusinessTrip>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            BusinessTrips = new ObservableCollection<BusinessTrip>();
+            LoadBusinessTripsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, BusinessTrip>(this, "Dodaj nowy", async (obj, item) =>
+            MessagingCenter.Subscribe<BusinessTripEditPage, BusinessTrip>(this, "Dodaj nowy", async (obj, item) =>
             {
                 var newItem = item as BusinessTrip;
-                Items.Add(newItem);
-                await DataStore.AddItemAsync(newItem);
+                BusinessTrips.Add(newItem);
+                await BusinessTripDataStore.AddItemAsync(newItem);
             });
         }
 
@@ -42,12 +42,12 @@ namespace CiuchApp.Mobile.ViewModels
 
             try
             {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                BusinessTrips.Clear();
+                var items = await BusinessTripDataStore.GetItemsAsync(true);
 
                 foreach (var item in items)
                 {
-                    Items.Add(item);
+                    BusinessTrips.Add(item);
                 }
             }
             catch (Exception ex)

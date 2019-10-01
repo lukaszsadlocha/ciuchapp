@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 using CiuchApp.Mobile.Models;
 using CiuchApp.Mobile.ViewModels;
 using CiuchApp.Domain;
+using System.Linq;
 
 namespace CiuchApp.Mobile.Views
 {
@@ -14,18 +15,30 @@ namespace CiuchApp.Mobile.Views
     [DesignTimeVisible(false)]
     public partial class BusinessTripDetailPage : ContentPage
     {
-        BusinessTripViewModel viewModel;
+        BusinessTripDetailsViewModel viewModel;
 
-        public BusinessTripDetailPage(BusinessTripViewModel viewModel)
+        public BusinessTripDetailPage(BusinessTripDetailsViewModel viewModel)
         {
             InitializeComponent();
-
             BindingContext = this.viewModel = viewModel;
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await viewModel.GetPickerValues();
         }
 
         private async void Save_Button_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Sucess", "Saved", "Done");
+            IsBusy = true;
+            await viewModel.Save();
+            await DisplayAlert("", "Zmiany zostały zapisane", "Wróć");
+        }
+
+        private void Cancel_Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

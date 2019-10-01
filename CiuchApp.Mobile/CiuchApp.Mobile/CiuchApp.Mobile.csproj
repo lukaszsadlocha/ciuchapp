@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
@@ -18,11 +19,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\BusinessTripsPage.xaml.cs">
-      <DependentUpon>BusinessTripsPage.xaml</DependentUpon>
+    <Compile Update="Views\BusinessTrip\BusinessTripOverviewPage.xaml.cs">
+      <DependentUpon>BusinessTripOverviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\BusinessTripDetailPage.xaml.cs">
+    <Compile Update="Views\BusinessTrip\BusinessTripDetailPage.xaml.cs">
       <DependentUpon>BusinessTripDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BusinessTrip\BusinessTripEditPage.xaml.cs">
+      <DependentUpon>BusinessTripEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Piece\PieceDetailPage.xaml.cs">
+      <DependentUpon>PieceDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Piece\PieceOverviewPage.xaml.cs">
+      <DependentUpon>PieceOverviewPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

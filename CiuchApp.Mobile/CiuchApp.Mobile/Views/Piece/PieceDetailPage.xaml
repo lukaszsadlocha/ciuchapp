@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CiuchApp.Mobile.Views.PieceDetailPage"
+             Title="{Binding Title}">
+
+    <ScrollView Padding="15">
+        <StackLayout>
+
+            <Picker ItemsSource="{Binding Countries}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Model.Country}"></Picker>
+            <Picker ItemsSource="{Binding Cities}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Model.City}"></Picker>
+            <DatePicker Date="{Binding Model.DateFrom, Mode=TwoWay}"></DatePicker>
+            <DatePicker Date="{Binding Model.DateTo, Mode=TwoWay}"></DatePicker>
+            <Picker ItemsSource="{Binding Seasons}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Model.Season}"></Picker>
+            <Picker ItemsSource="{Binding Currencies}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding Model.Currency}"></Picker>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Zapisz" Clicked="Save_Button_Clicked"></Button>
+                <Button Text="Anuluj" Clicked="Cancel_Button_Clicked"></Button>
+            </StackLayout>
+
+
+            <Button Text="Take a picture" Clicked="TakePictureButton_Clicked"></Button>
+            <Image x:Name="MyImage"></Image>
+            <Label x:Name="PathLabel"></Label>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -11,21 +11,22 @@ using CiuchApp.Mobile.Models;
 using CiuchApp.Mobile.Views;
 using CiuchApp.Mobile.ViewModels;
 using CiuchApp.Domain;
+using Plugin.Media;
 
 namespace CiuchApp.Mobile.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
-    public partial class BusinessTripsPage : ContentPage
+    public partial class BusinessTripOverviewPage : ContentPage
     {
-        BusinessTripsViewModel viewModel;
+        BusinessTripOverviewViewModel viewModel;
 
-        public BusinessTripsPage()
+        public BusinessTripOverviewPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new BusinessTripsViewModel();
+            BindingContext = viewModel = new BusinessTripOverviewViewModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -34,7 +35,7 @@ namespace CiuchApp.Mobile.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new BusinessTripDetailPage(new BusinessTripViewModel(item)));
+            await Navigation.PushAsync(new BusinessTripDetailPage(new BusinessTripDetailsViewModel(item)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
@@ -42,15 +43,17 @@ namespace CiuchApp.Mobile.Views
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+            await Navigation.PushModalAsync(new NavigationPage(new BusinessTripEditPage()));
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            if (viewModel.BusinessTrips.Count == 0)
+                viewModel.LoadBusinessTripsCommand.Execute(null);
         }
+
+      
     }
 }

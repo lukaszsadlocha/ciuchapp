@@ -4,12 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CiuchApp.Mobile.Views.BusinessTripsPage"
+             x:Class="CiuchApp.Mobile.Views.PieceOverviewPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Nowy" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
     <StackLayout>
@@ -51,6 +51,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Button Text="Take a picture" Clicked="TakePictureButton_Clicked"></Button>
+        <Image x:Name="MyImage"></Image>
+        <Label x:Name="PathLabel"></Label>
     </StackLayout>
     
 </ContentPage>

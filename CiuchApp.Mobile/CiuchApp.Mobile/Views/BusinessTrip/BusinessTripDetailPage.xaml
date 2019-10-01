@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CiuchApp.Mobile.Views.BusinessTripDetailPage"
+             Title="{Binding Title}">
+    <Grid>
+    <ScrollView Padding="15">
+            <StackLayout>
+
+                <Picker x:Name="CountryPicker" Title="Kraj" ItemsSource="{Binding Countries}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedCountry}"/>
+                <Picker x:Name="CityPicker" Title="Miasto" ItemsSource="{Binding Cities}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedCity}"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <DatePicker Date="{Binding Model.DateFrom, Mode=TwoWay}"/>
+                    <Label Text="_"/>
+                    <DatePicker Date="{Binding Model.DateTo, Mode=TwoWay}"/>
+                </StackLayout>
+                <Picker x:Name="SeasonPicker" Title="Sezon"   ItemsSource="{Binding Seasons}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedSeason}"/>
+                <Picker x:Name="CurrencyPicker" Title="Waluta" ItemsSource="{Binding Currencies}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedCurrency}" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Zapisz" Clicked="Save_Button_Clicked"></Button>
+                    <Button Text="Anuluj" Clicked="Cancel_Button_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        <ActivityIndicator Color="Blue" IsRunning="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </Grid>
+</ContentPage>

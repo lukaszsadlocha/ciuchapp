@@ -10,6 +10,6 @@ namespace CiuchApp.Mobile.Services
         Task<bool> UpdateItemAsync(T item);
         Task<bool> DeleteItemAsync(string id);
         Task<T> GetItemAsync(string id);
-        Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+        Task<IList<T>> GetItemsAsync(bool forceRefresh = true);
     }
 }

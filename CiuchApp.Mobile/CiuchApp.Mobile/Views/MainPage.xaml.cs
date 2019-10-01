@@ -21,7 +21,7 @@ namespace CiuchApp.Mobile.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.BusinessTripsOverviewMenuType, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -30,10 +30,10 @@ namespace CiuchApp.Mobile.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new BusinessTripsPage()));
+                    case (int)MenuItemType.BusinessTripsOverviewMenuType:
+                        MenuPages.Add(id, new NavigationPage(new BusinessTripOverviewPage()));
                         break;
-                    case (int)MenuItemType.About:
+                    case (int)MenuItemType.AboutMenuType:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
                 }
